@@ -1,13 +1,13 @@
-import ballerina/io;
-import ballerina/http;
+import ballerina/io; //This statement imports the io module, which provides functionalities for input and output
+import ballerina/http; //This statement imports the http module, which allows you to create and manage HTTP services and clients. It provides functionalities to handle HTTP requests and responses, enabling you to build web services or communicate with external APIs.
 
-type Course record {|
-    string course_name;
-    readonly string course_code;
-    string nqf_level;
+type Course record {|   //This declares a new record type named Course
+    string course_name;  //A mutable field that holds the name of the course as a string.
+    readonly string course_code; //A read-only field, meaning that once it is set, it cannot be modified
+    string nqf_level; //Another mutable field
 |};
 
-type Programme record {|
+type Programme record {|  //The Programme record encapsulates information about an academic program
     readonly string code;
     string nqf_level;
     string fac;
